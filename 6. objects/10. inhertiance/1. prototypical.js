@@ -12,12 +12,15 @@
         }
     };
 
-    var myDog = Object.create(myAnimal); //create a new object using myAnimal as the prototype
-    myDog.name = 'Doris the dog';
-    myDog.saying = 'woof';
-    myDog.growl = function(){
+    var dog = Object.create(myAnimal); //create a new object using myAnimal as the prototype
+
+    dog.saying = 'woof';
+    dog.growl = function(){
         return 'GRRRRRRR';
     };
+
+    var myDog = Object.create(dog);
+    myDog.name = 'Doris the dog';
 
     console.log(myDog.getName());
     console.log(myDog.speak());
