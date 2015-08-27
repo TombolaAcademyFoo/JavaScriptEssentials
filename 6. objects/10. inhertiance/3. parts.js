@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    //This just happens to be a ctor function...
     var Animal = function(name) {
         this.getName = function(){
             return name;
@@ -10,6 +11,7 @@
         };
     };
 
+    //This is the important part!!!
     var dog = function(that){
 
         that.speak = function(){
