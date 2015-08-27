@@ -19,11 +19,13 @@
         var that;
         spec.saying = 'woof';
 
-        that = animal(spec); //Could use a literal or new'd object.
+        //Could use a literal or new'd object.
+        that = animal(spec);
 
         that.growl = function(){
             return 'GRRRRR';
-        }
+        };
+
         return that;
     };
 
@@ -31,4 +33,5 @@
     console.log(myDog.getName());
     console.log(myDog.speak());
     console.log(myDog.growl());
+
 })();
